@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>2026 CRISCON | Odborná konference</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#efeeeb",
+              "surface-container-highest": "#e3e2df",
+              "on-surface": "#1a1c1a",
+              "surface": "#faf9f6",
+              "accent-lime": "#CADB2A",
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0", "lg": "0", "xl": "0", "full": "0"},
+          },
+        },
+      }
+    </script>
+    
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        .bitten-tl { clip-path: polygon(0 24px, 24px 24px, 24px 0, 100% 0, 100% 100%, 0 100%); }
+        .bitten-btn { clip-path: polygon(0 12px, 12px 12px, 12px 0, 100% 0, 100% 100%, 0 100%); }
+    
+        :root {
+          --sb-size: 16px;
+          --sb-track-color: #f1f1f1;
+          --sb-thumb-color: #888;
+          --sb-thumb-hover: #555;
+        }
+
+        ::-webkit-scrollbar {
+          width: var(--sb-size);
+          height: var(--sb-size);
+        }
+
+        ::-webkit-scrollbar-track {
+          background: var(--sb-track-color);
+          border-radius: 0 !important; 
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: var(--sb-thumb-color);
+          border-radius: 0 !important;
+          border: none !important;
+          background-color: #CADB2A;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: var(--sb-thumb-hover);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-accent-lime selection:text-on-surface">
+
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 bg-[#f1f1f1] h-24">
+  <div class="flex items-center gap-4 h-full">
+    <div class="w-4 h-4 bg-accent-lime shrink-0"></div>
+    <div class="h-full flex items-center">
+      <a href="#uvod" class="h-full block">
+          <img src="7777.png" alt="2026 CRISCON" class="h-full w-auto object-cover block">
+      </a>
+    </div>
+  </div>
+
+  <div class="hidden md:flex items-center space-x-12">
+    <a class="font-['Manrope'] uppercase tracking-[0.1em] text-[0.6875rem] font-semibold text-[#1A1C1A]/60 hover:text-accent-lime transition-colors duration-200" href="#uvod">ÚVOD</a>
+    <a class="font-['Manrope'] uppercase tracking-[0.1em] text-[0.6875rem] font-semibold text-[#1A1C1A]/60 hover:text-accent-lime transition-colors duration-200" href="#program">PROGRAM</a>
+    <a class="font-['Manrope'] uppercase tracking-[0.1em] text-[0.6875rem] font-semibold text-[#1A1C1A]/60 hover:text-accent-lime transition-colors duration-200" href="#speakers">ŘEČNÍCI</a>
+    <a class="font-['Manrope'] uppercase tracking-[0.1em] text-[0.6875rem] font-semibold text-[#1A1C1A]/60 hover:text-accent-lime transition-colors duration-200" href="#logistika">LOGISTIKA</a>
+  </div>
+
+  <a href="#registrace" class="bitten-tl font-['Manrope'] inline-block uppercase tracking-[0.15em] text-[0.6875rem] font-bold px-8 py-3 bg-accent-lime text-on-surface hover:bg-on-surface hover:text-surface transition-all duration-300">
+    REGISTRACE
+  </a>
+</nav>
+
+<main class="pt-24">
+    
+<section id="uvod" class="relative min-h-[90vh] pl-8 flex flex-col md:flex-row items-stretch border-b border-on-surface/15 overflow-hidden">
+    <div class="md:w-3/5 pb-20 pt-16 order-2 md:order-1 relative z-10 flex flex-col justify-center">
+        <div class="flex items-center gap-3 mb-12">
+            <div class="w-4 h-4 bg-accent-lime shrink-0"></div>
+            <p class="font-['Manrope'] text-[0.6875rem] font-bold tracking-[0.3em] uppercase">Krizové řízení a řešení krizových situací · Zlín</p>
+        </div>
+        
+        <h1 class="mb-12">
+          <img src="logo2.png" alt="2026 CRISCON" class="w-full max-w-[50rem] h-auto block">
+        </h1>
+        
+        <div class="flex items-center gap-8">
+            <a href="#program" class="group flex items-center gap-4 text-on-surface font-semibold tracking-[0.2em] text-[0.6875rem] uppercase">
+                <div class="w-6 h-6 bg-accent-lime shrink-0"></div>
+                PROZKOUMAT PROGRAM
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+        </div>
+    </div>
+    
+    <div id="speakers" class="md:w-2/5 h-[600px] md:h-auto relative overflow-hidden order-1 md:order-2 border-l border-on-surface/15 bitten-tl bg-surface-container">
+        <img class="w-full h-full object-cover grayscale contrast-125 brightness-75" data-alt="černobílý kontrastní portrét řečníka" src="thumbnail.jpg"/>
+        
+        <div class="absolute inset-0 flex items-center justify-center p-12 pointer-events-none">
+            <p class="text-surface font-light italic text-2xl md:text-3xl leading-snug tracking-tight text-center md:text-left drop-shadow-2xl">
+                "Nejlepší improvizace je ta, kterou máte předem nacvičenou. CrisCon propojuje přesně ty lidi, co to chápou."
+            </p>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 bg-accent-lime p-20 border border-on-surface/10 bitten-tl">
+            <p class="font-['Manrope'] text-[0.625rem] font-bold uppercase tracking-[0.2em] ">ŘEČNÍK</p>
+            <p class="text-lg font-medium mt-1 uppercase tracking-tight">Ing. Petra Dvořáková</p>
+        </div>
+    </div>
+</section>
+
+<section id="program" class="grid grid-cols-1 md:grid-cols-12 border-b border-on-surface/15">
+    
+    <div class="md:col-span-4 p-8 md:p-16 border-r border-on-surface/15 bg-surface-container-low relative">
+        <div class="absolute top-0 left-0 w-20 h-20 bg-accent-lime shrink-0"></div>
+        <h2 class="text-3xl font-bold tracking-tight uppercase mb-8">O KONFERENCI</h2>
+        <p class="text-lg text-on-surface leading-relaxed mb-12 font-medium">
+            CrisCon není jen konference. Je to místo, kde se potkávají lidé, kteří řeší krizové situace v reálném světě – a ti, kteří hledají způsoby, jak jim předcházet.
+        </p>
+        
+        <div class="space-y-12">
+            <div class="relative">
+                <span class="text-7xl font-bold tracking-tighter">150+</span>
+                <p class="font-['Manrope'] text-[0.6875rem] font-bold uppercase tracking-[0.3em] mt-2 text-accent-lime">ÚČASTNÍKŮ</p>
+            </div>
+            <div>
+                <span class="text-7xl font-bold tracking-tighter">15</span>
+                <p class="font-['Manrope'] text-[0.6875rem] font-bold uppercase tracking-[0.3em] mt-2 text-accent-lime">PŘEDNÁŠEJÍCÍCH</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="md:col-span-8 p-8 md:p-16 flex flex-col justify-between relative">
+        <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-on-surface/5 hidden md:block"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <div class="flex items-center gap-3 mb-4 leading-none" >
+                    <div class="w-4 h-4 bg-accent-lime shrink-0"></div>
+                    <h3 class="text-base font-bold uppercase tracking-tight">MISE KONFERENCE</h3>
+                </div>
+                <p class="text-lg text-on-surface/60 leading-loose mb-4">
+                    Na jednom místě se setkávají experti na bezpečnost, záchranáři, krizoví manažeři i výzkumníci z desítek institucí z akademické sféry i praxe.
+                </p>
+                <div class="pt-8 border-t border-on-surface/10">
+                    <h4 class="text-xs font-bold uppercase tracking-[0.3em] mb-4 text-on-surface/40">DVOUDENNÍ PROGRAM NABÍZÍ:</h4>
+                    <ul class="space-y-3 font-['Manrope'] text-[0.75rem] font-medium uppercase tracking-[0.15em]">
+                        <li class="flex items-center gap-3"><div class="w-3 h-3 bg-accent-lime shrink-0"></div> Inspirativní přednášky</li>
+                        <li class="flex items-center gap-3"><div class="w-3 h-3 bg-accent-lime shrink-0"></div> Skutečné příběhy krizí</li>
+                        <li class="flex items-center gap-3"><div class="w-3 h-3 bg-accent-lime shrink-0"></div> Otevřené diskuze</li>
+                        <li class="flex items-center gap-3"><div class="w-3 h-3 bg-accent-lime shrink-0"></div> Nové kontakty</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-4 h-4 bg-accent-lime shrink-0"></div>
+                    <h3 class="text-xl font-bold uppercase tracking-tight">AKTUÁLNÍ VÝZVY</h3>
+                </div>
+                <div class="grid grid-cols-1 gap-2 text-[0.8125rem] text-on-surface/70 leading-relaxed uppercase tracking-wider font-medium">
+                    <div class="py-2 border-b border-on-surface/5 flex items-center justify-between">
+                        <span>Krizové řízení a ochrana obyvatelstva</span>
+                        <div class="w-3 h-3 bg-accent-lime shrink-0"></div>
+                    </div>
+                    <div class="py-2 border-b border-on-surface/5 flex items-center justify-between">
+                        <span>Analýza a řízení rizik</span>
+                        <div class="w-3 h-3 bg-accent-lime shrink-0"></div>
+                    </div>
+                    <div class="py-2 border-b border-on-surface/5 flex items-center justify-between">
+                        <span>Kritická infrastruktura</span>
+                        <div class="w-3 h-3 bg-accent-lime shrink-0"></div>
+                    </div>
+                    <div class="py-2 border-b border-on-surface/5 flex items-center justify-between">
+                        <span>Kybernetická bezpečnost</span>
+                        <div class="w-3 h-3 bg-accent-lime shrink-0"></div>
+                    </div>
+                    <div class="py-2 border-b border-on-surface/5 flex items-center justify-between">
+                        <span>Environmentální a technologické hrozby</span>
+                        <div class="w-3 h-3 bg-accent-lime shrink-0"></div>
+                    </div>
+                    <div class="py-2 border-b border-on-surface/5 flex items-center justify-between">
+                        <span>Zdravotnické krizové situace</span>
+                        <div class="w-3 h-3 bg-accent-lime shrink-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      <div class="mt-20 flex justify-end relative">
+        <div class="flex items-center gap-8 max-w-4xl text-right">
+            <div class="py-2">
+                <p class="text-2xl font-bold tracking-tight italic mb-4">
+                    "Protože krize si nevybírají. A připravenost není náhoda."
+                </p>
+                <p class="font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.3em] text-accent-lime font-bold">
+                    CRISCON: O KROK NAPŘED
+                </p>
+            </div>
+            <div class="w-20 h-20 bg-accent-lime shrink-0"></div>
+        </div>
+      </div>
+            
+    </div>
+</section>
+
+<section id="registrace" class="grid grid-cols-1 md:grid-cols-12 border-b border-on-surface/15 bg-surface-container-low">
+    <div class="md:col-span-12 p-12 md:p-24 md:m-24 flex flex-col items-center justify-center text-center bg-accent-lime bitten-tl">
+        
+        <div class="mb-12 flex items-center justify-center gap-4">
+            <div class="w-6 h-6 bg-on-surface shrink-0"></div>
+            <h2 class="text-5xl md:text-7xl font-bold tracking-tighter uppercase text-on-surface">REGISTRACE</h2>
+            <div class="w-6 h-6 bg-on-surface shrink-0"></div>
+        </div>
+        
+        <div class="w-full max-w-2xl bg-[#1A1C1A] border border-surface/10 bitten-tl p-12 md:p-20 relative text-surface shadow-2xl">
+            
+            <p class="font-['Manrope'] text-[0.6875rem] font-bold text-accent-lime mb-4 uppercase tracking-[0.4em]">KOMPLETNÍ VSTUPENKA</p>
+            
+            <div class="flex flex-col items-center gap-2 mb-10">
+                <span class="text-6xl md:text-8xl font-bold tracking-tighter text-surface">4.500 CZK</span>
+            </div>
+            
+            <div class="space-y-6 mb-12 border-y border-surface/10 py-10">
+                <div class="flex justify-between items-center text-[0.6875rem] font-bold uppercase tracking-[0.2em]">
+                    <span class="text-surface/40">TERMÍN KONÁNÍ</span>
+                    <span class="text-surface">ZÁŘÍ 2026</span>
+                </div>
+                <div class="flex justify-between items-center text-[0.6875rem] font-bold uppercase tracking-[0.2em]">
+                    <span class="text-surface/40">UZÁVĚRKA REGISTRACÍ</span>
+                    <span class="text-accent-lime">15. SRPNA 2026</span>
+                </div>
+            </div>
+            
+            <button class="bitten-tl w-full bg-accent-lime text-on-surface py-8 font-['Manrope'] text-[0.875rem] font-bold uppercase tracking-[0.3em] hover:bg-surface transition-all duration-300 transform hover:-translate-y-1">
+                ZAREGISTROVAT SE NYNÍ
+            </button>
+            
+            <p class="mt-8 text-[0.625rem] text-surface/40 uppercase tracking-[0.1em] font-medium">
+                Cena zahrnuje vstup na všechny přednášky, networkingový večer a občerstvení.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="logistika" class="grid grid-cols-1 md:grid-cols-2 relative">
+    
+    <div class="p-8 md:p-24 border-r border-on-surface/15 relative bg-white">
+        <h2 class="text-3xl font-bold tracking-tight uppercase mb-16 flex items-center gap-4">
+            LOGISTIKA <div class="w-8 h-8 bg-accent-lime shrink-0"></div>
+        </h2>
+        
+        <div class="space-y-16">
+            <div class="flex gap-8 group">
+                <span class="text-accent-lime font-bold text-xl border-b-2 border-accent-lime h-fit">01</span>
+                <div>
+                    <h5 class="text-xl font-bold uppercase mb-4 tracking-tight">LOKACE</h5>
+                    <p class="text-on-surface/60 leading-relaxed font-medium">
+                        Kongresové centrum Zlín<br/>
+                        nám. T. G. Masaryka 5556, 760 01 Zlín
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-8 group">
+                <span class="text-accent-lime font-bold text-xl border-b-2 border-accent-lime h-fit">02</span>
+                <div>
+                    <h5 class="text-xl font-bold uppercase mb-4 tracking-tight">UBYTOVÁNÍ</h5>
+                    <p class="text-on-surface/60 leading-relaxed font-medium">
+                        Pro účastníky jsme domluvili zvýhodněné ceny v partnerském Hotelu Zlín (bývalá Moskva) v centru města.
+                    </p>
+                </div>
+            </div>
+            <div class="flex gap-8 group">
+                <span class="text-accent-lime font-bold text-xl border-b-2 border-accent-lime h-fit">03</span>
+                <div>
+                    <h5 class="text-xl font-bold uppercase mb-4 tracking-tight">DOPRAVA</h5>
+                    <p class="text-on-surface/60 leading-relaxed font-medium">
+                        Skvělá dostupnost MHD (zastávka Náměstí Práce) a v docházkové vzdálenosti od hlavního vlakového a autobusového nádraží.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="h-[600px] md:h-auto overflow-hidden relative bitten-tl bg-on-surface">
+        <img class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="moderní budova ve Zlíně" src="kongres.jpg"/>
+        <div class="absolute bottom-12 right-12 text-surface text-[0.625rem] tracking-[0.5em] uppercase opacity-70 vertical-text origin-right rotate-90 whitespace-nowrap font-bold">
+            CENTRUM MĚSTA • ZLÍN
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="w-full px-8 py-20 grid grid-cols-1 md:grid-cols-4 gap-12 bg-[#1A1C1A] border-t border-surface/5">
+    
+    <div class="md:col-span-1">
+        <div class="flex items-center gap-3">
+            <div class="w-6 h-6 bg-accent-lime shrink-0"></div>
+            <div class="text-3xl font-bold tracking-[-0.05em] text-[#FAF9F6]">2026 CRISCON</div>
+        </div>
+        <p class="mt-6 text-[#FAF9F6]/60 font-['Manrope'] text-[0.6875rem] uppercase tracking-[0.3em] leading-loose font-bold">
+            UDÁVÁME SMĚR V OBLASTI KRIZOVÉHO ŘÍZENÍ.
+        </p>
+    </div>
+    
+    <div>
+        <h6 class="text-accent-lime font-['Manrope'] text-[0.625rem] font-bold uppercase tracking-[0.4em] mb-8 flex items-center gap-3">
+            NAVIGACE <div class="w-4 h-4 bg-accent-lime shrink-0"></div>
+        </h6>
+        <ul class="space-y-4">
+            <li><a class="text-[#FAF9F6]/80 font-['Manrope'] text-[0.625rem] uppercase tracking-[0.2em] hover:text-accent-lime transition-all font-bold" href="#program">PROGRAM</a></li>
+            <li><a class="text-[#FAF9F6]/80 font-['Manrope'] text-[0.625rem] uppercase tracking-[0.2em] hover:text-accent-lime transition-all font-bold" href="#speakers">ŘEČNÍCI</a></li>
+            <li><a class="text-[#FAF9F6]/80 font-['Manrope'] text-[0.625rem] uppercase tracking-[0.2em] hover:text-accent-lime transition-all font-bold" href="#logistika">LOKACE</a></li>
+        </ul>
+    </div>
+    
+    <div>
+        <h6 class="text-accent-lime font-['Manrope'] text-[0.625rem] font-bold uppercase tracking-[0.4em] mb-8 flex items-center gap-3">
+            INFORMACE <div class="w-4 h-4 bg-accent-lime shrink-0"></div>
+        </h6>
+        <ul class="space-y-4">
+            <li><a class="text-[#FAF9F6]/80 font-['Manrope'] text-[0.625rem] uppercase tracking-[0.2em] hover:text-accent-lime transition-all font-bold" href="#">OCHRANA OSOBNÍCH ÚDAJŮ</a></li>
+            <li><a class="text-[#FAF9F6]/80 font-['Manrope'] text-[0.625rem] uppercase tracking-[0.2em] hover:text-accent-lime transition-all font-bold" href="#">OBCHODNÍ PODMÍNKY</a></li>
+            <li><a class="text-[#FAF9F6]/80 font-['Manrope'] text-[0.625rem] uppercase tracking-[0.2em] hover:text-accent-lime transition-all font-bold" href="#">KONTAKT</a></li>
+        </ul>
+    </div>
+    
+    <div class="flex flex-col justify-between">
+        <div class="flex gap-6">
+            <span class="material-symbols-outlined text-[#FAF9F6] hover:text-accent-lime cursor-pointer text-sm">public</span>
+            <span class="material-symbols-outlined text-[#FAF9F6] hover:text-accent-lime cursor-pointer text-sm">share</span>
+            <span class="material-symbols-outlined text-[#FAF9F6] hover:text-accent-lime cursor-pointer text-sm">mail</span>
+        </div>
+        <p class="text-[#FAF9F6]/20 font-['Manrope'] text-[0.625rem] uppercase tracking-[0.3em] mt-12 border-t border-[#FAF9F6]/5 pt-4 font-bold">
+            © 2026 CRISCON • VŠECHNA PRÁVA VYHRAZENA
+        </p>
+    </div>
+</footer>
+</body>
+</html>
